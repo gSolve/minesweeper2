@@ -11,4 +11,8 @@ describe('Minefield creation', () => {
     expect(minefield.size.columns).toBe(3);
     expect(minefield.size.rows).toBe(3);
   });
+
+  test('should contain one mine', () => {
+    expect(minefield.numberOfMines).toBe(1);
+  });
 });
