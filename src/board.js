@@ -8,5 +8,15 @@ class Board {
   isEmpty() {
     return true;
   }
+
+  print() {
+    return `+-+-+-+
+| | | |
++-+-+-+
+| | | |
++-+-+-+
+| | | |
++-+-+-+`;
+  }
 }
 module.exports = Board;
