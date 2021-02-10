@@ -26,4 +26,8 @@ describe('Game board creation', () => {
 +-+-+-+`,
     );
   });
+
+  test('should position 0,0 give an empty field', () => {
+    expect(board.getPosition(0, 0)).toBe(' ');
+  });
 });

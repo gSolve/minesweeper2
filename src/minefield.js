@@ -5,6 +5,10 @@ class Minefield {
     this.size.columns = 3;
     this.numberOfMines = 1;
   }
+
+  getPosition() {
+    return ' ';
+  }
 }
 
 module.exports = Minefield;

@@ -18,5 +18,9 @@ class Board {
 | | | |
 +-+-+-+`;
   }
+
+  getPosition() {
+    return ' ';
+  }
 }
 module.exports = Board;

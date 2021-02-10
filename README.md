@@ -1,1 +1,40 @@
 # templateRepository
+
+
+## ✅ US 1
+*As a* user 
+*I want* to have a board 
+*so that* I'd be able to play minesweeper.
+
+**UAT 1:**
+_Given_ a minesweeper game
+_when_ the user starts it
+_then_ an empty board 3x3 is created.
+
+
+---
+## ✅ US 2 
+*As a* user 
+*I want* to clean a cell
+*so that* I'd discover if there's a bomb or a free cell.
+
+**UAT 2:**
+_Given_ a minesweeper game
+_when_ the user starts it
+_then_ a minefield with one 💣 bomb is created.
+
+---
+## 🚧 US 3 - Integrate Board & Minefield
+*As a* user 
+*I want* to clean a cell
+*so that* I'd discover if there's a bomb or a free cell.
+
+**UAT 1:** 🚧
+_Given_ a board 3x3 over a minefield 3x3 with a 💣 bomb in the middle
+_when_ the user clean 🧹 the middle
+_then_ the minesweeper raise a 💥 boom!
+
+**UAT 2:**
+_Given_ a board 3x3 over a minefield 3x3 with a 💣 bomb in the top left
+_when_ the user clean 🧹 the middle
+_then_ the minesweeper raise a free ✅ cell!
