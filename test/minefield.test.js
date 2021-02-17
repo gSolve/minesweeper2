@@ -51,7 +51,17 @@ describe('US3 - UAT1', () => {
     expect(minefield.getPosition(0, 0)).toBe(' ');
   });
 
-  it.skip('expect a bomb in the middle of the minefield', () => {
-
+  it('expect a bomb in the middle of the minefield', () => {
+    // _Given_ a board 3x3 over a minefield 3x3 with a 💣 bomb in the middle
+    expect(minefield.getPosition(1,1)).toBe('💥');
+  });
+  
+  xit('expect the minesweeper to raise a 💥 boom when the user cleans 🧹 the middle cell', () => {
+    // _when_ the user clean 🧹 the middle
+    // _then_ the minesweeper raise a 💥 boom!
+    let user = new user();
+    user.clean(1,1);
+    expect(minesweeper.current()).toBe('💥');
+    
   });
 });

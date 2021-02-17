@@ -8,7 +8,7 @@
     "postinstall": "npm run requirements-check",
     "requirements-check": "node check_node_version.js",
     "start": "node src/minesweeper2.js",
-    "test:watch": "jest --watchAll --coverage",
+    "test:watch": "jest --watchAll --coverage --verbose",
     "test": "jest"
   },
   "repository": {
