@@ -1,7 +1,7 @@
 # templateRepository
 
 
-## ✅ US 1
+## ✅ US 1 -- Board creation
 *As a* user 
 *I want* to have a board 
 *so that* I'd be able to play minesweeper.
@@ -13,7 +13,7 @@ _then_ an empty board 3x3 is created.
 
 
 ---
-## ✅ US 2 
+## ✅ US 2 -- clean a cell nd find what is inside
 *As a* user 
 *I want* to clean a cell
 *so that* I'd discover if there's a bomb or a free cell.
