@@ -2,7 +2,7 @@
   "name": "minesweeper2",
   "version": "1.0.0",
   "description": "Template for basing repositories off",
-  "main": "src/minesweeper2.js",
+  "main": "src/minesweeper.js",
   "scripts": {
     "lint": "eslint --cache --fix",
     "postinstall": "npm run requirements-check",
