@@ -3,7 +3,7 @@ class Board {
     this.size = Object();
     this.size.rows = 3;
     this.size.columns = 3;
-    this.mines = [[' ',' ',' '],[' ','X',' '],[' ',' ',' ']];
+    this.mines = [[' ', ' ', ' '], [' ', 'X', ' '], [' ', ' ', ' ']];
   }
 
   isEmpty() {
