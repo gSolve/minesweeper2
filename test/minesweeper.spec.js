@@ -18,6 +18,17 @@ describe('Minesweeper creation', () => {
     expect(minesweeper.board.size.columns).toBe(3);
     expect(minesweeper.board.size.rows).toBe(3);
   });
+
+  test('expect the board is overlapping the minefield', () => {
+    minesweeper = new Minesweeper([[' ', ' ', ' '], [' ', '💥', ' '], [' ', ' ', ' ']]);
+    expect(minesweeper.board.getPosition(0, 0)).toBe(' ');
+    expect(minesweeper.minefield.getPosition(0, 0)).toBe(' ');
+  });
+
+  test('expect a bomb in the middle of the minefield', () => {
+    minesweeper = new Minesweeper([[' ', ' ', ' '], [' ', '💥', ' '], [' ', ' ', ' ']]);
+    expect(minesweeper.minefield.getPosition(1, 1)).toBe('💥');
+  });
 });
 
 describe('Minesweeper cleans a square', () => {
