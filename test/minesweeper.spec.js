@@ -37,11 +37,13 @@ describe('Minesweeper cleans a square', () => {
     expect(minesweeper.clean(1, 1)).toBe('💥');
   });
 
-  test('should clean a square on the middle of the board and raise a free cell', () => {
+  test('should clean a square on the bottom middle of the board and raise a free cell', () => {
     minesweeper = new Minesweeper([['💣', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]);
-    //     _Given_ a board 3x3 over a minefield 3x3 with a 💣 bomb in the top left
-    // _when_ the user clean 🧹 the middle
-    // _then_ the minesweeper raise a free ✅ cell!
-    expect(minesweeper.clean(1, 1)).toBe(' ');
+    expect(minesweeper.clean(2, 1)).toBe(' ');
+  });
+
+  test('should clean a square on the middle of the board and raise a 1 in that position', () => {
+    minesweeper = new Minesweeper([['💣', ' ', ' '], [' ', '1', ' '], [' ', ' ', ' ']]);
+    expect(minesweeper.clean(1, 1)).toBe('1');
   });
 });

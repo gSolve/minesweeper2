@@ -41,6 +41,16 @@ _then_ the minesweeper raise a free ✅ cell!
 
 ---
 
-## Refactor 🚧  
+## Refactor 
 ✅ - Move the integration of the board and minefield into the minesweeper  
 ✅ - Minefield should contain bombs while the minesweeper raises a boom for the bomb
+
+---
+
+## US4 Get the number of bombs around the cell
+
+**UAT 1:** ✅  
+_Given_ a board 3x3 over a minefield 3x3 with a 💣 bomb in the top left
+_when_ the user clean 🧹 the middle
+_then_ the minesweeper raise an indicator of 1!
+
