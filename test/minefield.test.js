@@ -18,12 +18,12 @@ describe('Minefield creation', () => {
   });
 
   test('should position 0,0 give an empty field', () => {
-    minefield = new Minefield([[' ', ' ', ' '], [' ', '💥', ' '], [' ', ' ', ' ']]);
+    minefield = new Minefield([[' ', ' ', ' '], [' ', '💣', ' '], [' ', ' ', ' ']]);
     expect(minefield.getPosition(0, 0)).toBe(' ');
   });
 
   test('should have a bomb in the top left corner', () => {
-    minefield = new Minefield([['💥', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]);
-    expect(minefield.getPosition(0, 0)).toBe('💥');
+    minefield = new Minefield([['💣', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]);
+    expect(minefield.getPosition(0, 0)).toBe('💣');
   });
 });

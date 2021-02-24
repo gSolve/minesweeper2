@@ -43,4 +43,4 @@ _then_ the minesweeper raise a free ✅ cell!
 
 ## Refactor 🚧  
 ✅ - Move the integration of the board and minefield into the minesweeper  
-- Minefield should contain bombs while the minesweeper raises a boom for the bomb
+✅ - Minefield should contain bombs while the minesweeper raises a boom for the bomb
