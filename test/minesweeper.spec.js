@@ -46,4 +46,9 @@ describe('Minesweeper cleans a square', () => {
     minesweeper = new Minesweeper([['💣', ' ', ' '], [' ', '1', ' '], [' ', ' ', ' ']]);
     expect(minesweeper.clean(1, 1)).toBe('1');
   });
+
+  test('should clean a square on the middle of the board and raise a 3 in that position', () => {
+    minesweeper = new Minesweeper([['💣', '💣', ' '], ['💣', '3', ' '], [' ', ' ', ' ']]);
+    expect(minesweeper.clean(1, 1)).toBe('3');
+  });
 });

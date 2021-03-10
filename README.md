@@ -54,3 +54,40 @@ _Given_ a board 3x3 over a minefield 3x3 with a 💣 bomb in the top left
 _when_ the user clean 🧹 the middle
 _then_ the minesweeper raise an indicator of 1!
 
+**UAT 2**
+_Given_ a board 3x3 over a minefield 3x3 with a 💣 bomb in the top left, top middle and middle left
+_when_ the user clean 🧹 the middle
+_then_ the minesweeper raise an indicator of 3!
+
+**UAT 3**
+TBD
+
+
+
+---
+UAT 4
+Given
+minesweeper = new Minesweeper([['💣', '💣', ' '], ['💣', ' ', ' '], [' ', ' ', ' ']]);
+When
+minesweeper.clean(1,1);
+Then
+minesweeper.gameStatus().not.toBe("game over")
+minesweeper.boardAscii(' | | \n |3| \n | | ');
+
+UAT 5
+Given
+minesweeper = new Minesweeper([['💣', '💣', '💣'], ['💣', ' ', '💣'], ['💣', '💣', '💣']]);
+When
+minesweeper.clean(1,1);
+Then
+minesweeper.gameStatus().not.toBe("game over")
+minesweeper.boardAscii(' | | \n |8| \n | | ');
+
+UAT 6
+Given
+minesweeper = new Minesweeper([[' ', '💣', '💣'], ['💣', '💣', '💣'], ['💣', '💣', '💣']]);
+When
+minesweeper.clean(0,0);
+Then
+minesweeper.gameStatus().not.toBe("game over")
+minesweeper.boardAscii('3| | \n | | \n | | ');
