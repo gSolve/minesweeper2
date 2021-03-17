@@ -1,4 +1,5 @@
 const Minesweeper = require('../src/minesweeper.js');
+const Board = require('../src/board.js');
 
 describe('Minesweeper creation', () => {
   let minesweeper;
@@ -50,5 +51,25 @@ describe('Minesweeper cleans a square', () => {
   test('should clean a square on the middle of the board and raise a 3 in that position', () => {
     minesweeper = new Minesweeper([['💣', '💣', ' '], ['💣', '3', ' '], [' ', ' ', ' ']]);
     expect(minesweeper.clean(1, 1)).toBe('3');
+  });
+});
+
+describe('The board is created and shown to the user', () => {
+  let minesweeper;
+
+  beforeEach(() => {
+    minesweeper = new Minesweeper();
+  });
+
+  test('given a new game', () => {
+    expect(minesweeper).toBeInstanceOf(Minesweeper);
+  });
+
+  test('A new board is created', () => {
+    expect(minesweeper.board).toBeInstanceOf(Board);
+  });
+
+  test('all the cells showed to the user are empty', () => {
+    expect(minesweeper.board.print()).toEqual('+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+');
   });
 });

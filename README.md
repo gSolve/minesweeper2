@@ -72,7 +72,7 @@ When
 minesweeper.clean(1,1);
 Then
 minesweeper.gameStatus().not.toBe("game over")
-minesweeper.boardAscii(' | | \n |3| \n | | ');
+minesweeper.print('+-+-+-+\n | | \n+-+-+-+\n |3| \n+-+-+-+\n | | \n+-+-+-+');
 
 UAT 5
 Given
@@ -81,7 +81,7 @@ When
 minesweeper.clean(1,1);
 Then
 minesweeper.gameStatus().not.toBe("game over")
-minesweeper.boardAscii(' | | \n |8| \n | | ');
+minesweeper.print('+-+-+-+\n | | \n+-+-+-+\n |8| \n+-+-+-+\n | | \n+-+-+-+');
 
 UAT 6
 Given
@@ -90,4 +90,4 @@ When
 minesweeper.clean(0,0);
 Then
 minesweeper.gameStatus().not.toBe("game over")
-minesweeper.boardAscii('3| | \n | | \n | | ');
+minesweeper.print('+-+-+-+\n3| | \n+-+-+-+\n | | \n+-+-+-+\n | | \n+-+-+-+');

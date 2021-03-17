@@ -7,7 +7,8 @@ describe('Game board creation', () => {
   });
 
   test('should initialise an empty board', () => {
-    expect(board.isEmpty()).toBe(true);
+    const emptyBoard = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']];
+    expect(board.board).toStrictEqual(emptyBoard);
   });
 
   test('should initialise a board that is 3x3', () => {
