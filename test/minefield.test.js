@@ -39,7 +39,7 @@ describe('Given a minefield', () => {
   });
 
   test('should return three neighbour bombs', () => {
-    minefield.mines = [['💣', '💣', ' '], ['💣', ' ', ' '], [' ', ' ', ' ']];
+    minefield.mines = [[' ', '💣', '💣'], ['💣', ' ', ' '], [' ', ' ', ' ']];
     expect(minefield.getNeighbouringBombCount(1, 1)).toBe(3);
   });
 
