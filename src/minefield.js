@@ -60,7 +60,7 @@ class Minefield {
       numberOfNeighbouringBombs += 1;
     }
 
-    return numberOfNeighbouringBombs;
+    return numberOfNeighbouringBombs === 0 ? ' ' : numberOfNeighbouringBombs;
   }
 }
 

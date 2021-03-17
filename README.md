@@ -54,7 +54,7 @@ _Given_ a board 3x3 over a minefield 3x3 with a 💣 bomb in the top left
 _when_ the user clean 🧹 the middle
 _then_ the minesweeper raise an indicator of 1!
 
-**UAT 2**
+**UAT 2** ✅
 _Given_ a board 3x3 over a minefield 3x3 with a 💣 bomb in the top left, top middle and middle left
 _when_ the user clean 🧹 the middle
 _then_ the minesweeper raise an indicator of 3!
@@ -65,7 +65,7 @@ TBD
 
 
 ---
-UAT 4
+**UAT 4 ✅**
 Given
 minesweeper = new Minesweeper([['💣', '💣', ' '], ['💣', ' ', ' '], [' ', ' ', ' ']]);
 When
@@ -74,32 +74,32 @@ Then
 minesweeper.gameStatus().not.toBe("game over")
 minesweeper.print('+-+-+-+\n | | \n+-+-+-+\n |3| \n+-+-+-+\n | | \n+-+-+-+');
 
-UAT 4.1
+**UAT 4.1** ✅
 Given minefield.mines = [['💣', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
 When minefield.getNeighbouringBombCount(1,1)
 Then return '1'
 
-UAT 4.2
+**UAT 4.2** ✅
 Given minefield.mines = [['💣', '💣', ' '], ['💣', ' ', ' '], [' ', ' ', ' ']]
 When minefield.getNeighbouringBombCount(1,1)
 Then return '3'
 
-UAT 4.3
+**UAT 4.3** ✅
 Given minefield.mines = [['💣', '💣', '💣'], ['💣', ' ', '💣'], ['💣', '💣', '💣']]
 When minefield.getNeighbouringBombCount(1,1)
 Then return '8'
 
-UAT 4.4
+**UAT 4.4** ✅
 Given minefield.mines = [[' ', '💣', '💣'], ['💣', '💣', '💣'], ['💣', '💣', '💣']]
 When minefield.getNeighbouringBombCount(0,0)
 Then return '3'
 
-UAT 4.5
+**UAT 4.5** ✅
 Given minefield.mines = [['💣', '💣', '💣'], ['💣', '💣', '💣'], ['💣', '💣', ' ']]
 When minefield.getNeighbouringBombCount(2,2)
 Then return '3'
 
-UAT 5
+**UAT 5** ✅
 Given
 minesweeper = new Minesweeper([['💣', '💣', '💣'], ['💣', ' ', '💣'], ['💣', '💣', '💣']]);
 When
@@ -108,7 +108,7 @@ Then
 minesweeper.gameStatus().not.toBe("game over")
 minesweeper.print('+-+-+-+\n | | \n+-+-+-+\n |8| \n+-+-+-+\n | | \n+-+-+-+');
 
-UAT 6
+**UAT 6** ✅
 Given
 minesweeper = new Minesweeper([[' ', '💣', '💣'], ['💣', '💣', '💣'], ['💣', '💣', '💣']]);
 When
