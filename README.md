@@ -74,6 +74,21 @@ Then
 minesweeper.gameStatus().not.toBe("game over")
 minesweeper.print('+-+-+-+\n | | \n+-+-+-+\n |3| \n+-+-+-+\n | | \n+-+-+-+');
 
+UAT 4.1
+Given minefield.mines = [['💣', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
+When minefield.getNeighbouringBombCount(1,1)
+Then return '1'
+
+UAT 4.2
+Given minefield.mines = [['💣', '💣', ' '], ['💣', ' ', ' '], [' ', ' ', ' ']]
+When minefield.getNeighbouringBombCount(1,1)
+Then return '3'
+
+UAT 4.3
+Given minefield.mines = [['💣', '💣', '💣'], ['💣', ' ', '💣'], ['💣', '💣', '💣']]
+When minefield.getNeighbouringBombCount(1,1)
+Then return '8'
+
 UAT 5
 Given
 minesweeper = new Minesweeper([['💣', '💣', '💣'], ['💣', ' ', '💣'], ['💣', '💣', '💣']]);
@@ -91,3 +106,11 @@ minesweeper.clean(0,0);
 Then
 minesweeper.gameStatus().not.toBe("game over")
 minesweeper.print('+-+-+-+\n3| | \n+-+-+-+\n | | \n+-+-+-+\n | | \n+-+-+-+');
+
+UAT 7
+Given
+minesweeper = new Minesweeper([['💣', '💣', ' '], ['💣', '💣', ' '], [' ', ' ', ' ']]);
+When
+minesweeper.clean(1,1);
+Then
+minesweeper.gameStatus().toBe("game over")

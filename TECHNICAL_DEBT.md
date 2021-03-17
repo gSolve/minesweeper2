@@ -5,3 +5,6 @@
     - getPosition is hardcoded
 - ✅ Remove mines from board
 - ✅ getBoard isn't covered 
+- make game status strings a global constants
+- long printed format is difficult to understand
+- remove Board from minefield.test.js

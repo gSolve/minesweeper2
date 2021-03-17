@@ -9,7 +9,14 @@ class Minesweeper {
 
   clean(row, column) {
     const cellResult = this.minefield.getPosition(row, column);
+    if (cellResult === ' ') {
+      // const neighbouringBombCount = this.minefield.neighbouringBombCount();
+    }
     return cellResult === '💣' ? '💥' : cellResult;
+  }
+
+  gameStatus() {
+    return '';
   }
 }
 

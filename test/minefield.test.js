@@ -27,3 +27,24 @@ describe('Minefield creation', () => {
     expect(minefield.getPosition(0, 0)).toBe('💣');
   });
 });
+
+describe('Given a minefield', () => {
+  let minefield;
+  beforeEach(() => {
+    minefield = new Minefield();
+  });
+  test('should return one neighbour bomb', () => {
+    minefield.mines = [['💣', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']];
+    expect(minefield.getNeighbouringBombCount(1, 1)).toBe(1);
+  });
+
+  test('should return three neighbour bombs', () => {
+    minefield.mines = [['💣', '💣', ' '], ['💣', ' ', ' '], [' ', ' ', ' ']];
+    expect(minefield.getNeighbouringBombCount(1, 1)).toBe(3);
+  });
+
+  test('should return 8 neighbour bombs', () => {
+    minefield.mines = [['💣', '💣', '💣'], ['💣', ' ', '💣'], ['💣', '💣', '💣']];
+    expect(minefield.getNeighbouringBombCount(1, 1)).toBe(8);
+  });
+});

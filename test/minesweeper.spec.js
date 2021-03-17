@@ -73,3 +73,26 @@ describe('The board is created and shown to the user', () => {
     expect(minesweeper.board.print()).toEqual('+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+');
   });
 });
+
+describe('Game status', () => {
+  //   Given
+  // minesweeper = new Minesweeper([['💣', '💣', ' '], ['💣', ' ', ' '], [' ', ' ', ' ']]);
+  // When
+  // minesweeper.clean(1,1);
+  // Then
+  // minesweeper.gameStatus().not.toBe("game over")
+  // minesweeper.print('+-+-+-+\n | | \n+-+-+-+\n |3| \n+-+-+-+\n | | \n+-+-+-+');
+
+  test('should not return "game over" when cleaning an empty position', () => {
+    const GAME_OVER = 'game over';
+    const minesweeper = new Minesweeper([['💣', '💣', ' '], ['💣', ' ', ' '], [' ', ' ', ' ']]);
+    minesweeper.clean(1, 1);
+    expect(minesweeper.gameStatus()).not.toBe(GAME_OVER);
+  });
+
+  test.skip('should print the number of bombs surrounding the cell in the middle that has been cleaned', () => {
+    const minesweeper = new Minesweeper([['💣', '💣', ' '], ['💣', ' ', ' '], [' ', ' ', ' ']]);
+    minesweeper.clean(1, 1);
+    expect(minesweeper.board.print()).toBe('+-+-+-+\n| | | |\n+-+-+-+\n| |3| |\n+-+-+-+\n| | | |\n+-+-+-+');
+  });
+});
