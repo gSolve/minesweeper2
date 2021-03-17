@@ -47,4 +47,14 @@ describe('Given a minefield', () => {
     minefield.mines = [['💣', '💣', '💣'], ['💣', ' ', '💣'], ['💣', '💣', '💣']];
     expect(minefield.getNeighbouringBombCount(1, 1)).toBe(8);
   });
+
+  test('should return 3 neighbour bombs when we check the top left hand corner', () => {
+    minefield.mines = [[' ', '💣', '💣'], ['💣', '💣', '💣'], ['💣', '💣', '💣']];
+    expect(minefield.getNeighbouringBombCount(0, 0)).toBe(3);
+  });
+
+  test('should return 3 neighbour bombs when we check the bottom right hand corner', () => {
+    minefield.mines = [['💣', '💣', '💣'], ['💣', '💣', '💣'], ['💣', '💣', ' ']];
+    expect(minefield.getNeighbouringBombCount(2, 2)).toBe(3);
+  });
 });

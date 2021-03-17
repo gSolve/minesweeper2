@@ -8,3 +8,6 @@
 - make game status strings a global constants
 - long printed format is difficult to understand
 - remove Board from minefield.test.js
+- size.rows and size.columns in minefield are hardcoded
+- minefield.getNeighbouringBombCount needs to be more DRY
+- minefield.getPosition and minefield.getNeighbouringBombCount have high cyclomatic-complexity

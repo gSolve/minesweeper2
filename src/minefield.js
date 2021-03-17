@@ -8,6 +8,12 @@ class Minefield {
   }
 
   getPosition(row, column) {
+    if (row < 0 || column < 0) {
+      return null;
+    }
+    if (row > this.size.rows - 1 || column > this.size.columns - 1) {
+      return null;
+    }
     return this.mines[row][column];
   }
 

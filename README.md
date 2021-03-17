@@ -89,6 +89,16 @@ Given minefield.mines = [['💣', '💣', '💣'], ['💣', ' ', '💣'], ['💣
 When minefield.getNeighbouringBombCount(1,1)
 Then return '8'
 
+UAT 4.4
+Given minefield.mines = [[' ', '💣', '💣'], ['💣', '💣', '💣'], ['💣', '💣', '💣']]
+When minefield.getNeighbouringBombCount(0,0)
+Then return '3'
+
+UAT 4.5
+Given minefield.mines = [['💣', '💣', '💣'], ['💣', '💣', '💣'], ['💣', '💣', ' ']]
+When minefield.getNeighbouringBombCount(2,2)
+Then return '3'
+
 UAT 5
 Given
 minesweeper = new Minesweeper([['💣', '💣', '💣'], ['💣', ' ', '💣'], ['💣', '💣', '💣']]);
